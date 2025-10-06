@@ -1,51 +1,64 @@
-# DatingApp
+❤️ Dating App
 
-Demo
+Full-Stack | ASP.NET Core Web API + Angular + SQL Server + Cloudinary
 
-Azure published - https://dappdemo.azurewebsites.net/ - Register/Login with your information and check the app flow OR you can just login with an existing user lola/password
+🔍 Overview
 
-![DatingApp Demo](DatingApp-SPA/src/assets/DatingApp_Demo.gif)
+The Dating App is a modern web application that allows users to create profiles, upload photos, match with others, and chat in real time.
+It’s built using ASP.NET Core Web API and Angular, following clean architecture principles for scalability and performance.
 
-Dating App ( Angular 9 / .Net WebAPI Core (v 3.0) / Entity Framework core ( v 3.0) / SQL Server)
+✨ Key Features
 
-- Identity and Role Management for user logins. Created policies so that Api end points are accessible to users with specific roles.
+👤 User Profiles – Register, edit profiles, and upload profile pictures.
 
-- Created route guards to protect routes specific to Admin User.
+❤️ Likes & Matches – Like profiles and view mutual matches.
 
-- Also created custom structural Directive to protect routes
+💬 Real-Time Chat – Implemented with SignalR for instant messaging.
 
-- Persist data using Entity Framework Core.
+🔐 Authentication & Authorization – JWT-based authentication and role-based permissions.
 
-- Used Repository Pattern, created generic Repository for adding another layer of abstraction over Entity Framework. 
+📷 Image Management – Integrated with Cloudinary API for photo upload, validation, and transformation.
 
-- Common error handling in Angular and .net core to show webapi errors on client app. Used Http Interceptors.
+🔍 Filtering & Pagination – Browse users using filters such as gender, age, and location.
 
-- Used AutoMapper in webapi core.
+📊 Activity Tracking – See who viewed your profile or liked you.
 
-- Integrated 3rd party components like Alertify.js as service wrapper into the Angular application
+🧠 AI & Automation Workflows
 
-- Authentication using JWT Authentication tokens for securing Webapi's.
+Used ChatGPT and Cursor during API design to generate boilerplate CRUD operations and DTO mappings.
 
-- Implemented lazy loading to load related navigation properties in entity so Entity Framework core loads navigation properties when it needs them.
+Tested and debugged API endpoints using Replit before pushing to production.
 
-- Filtering, sorting and paging of data
+Automated media upload, resizing, and storage through Cloudinary API, removing the need for manual moderation.
 
-- Drag and drop photo upload integration into a cloud platform (cloudinary)
+🛠️ Tech Stack
 
-- Private messaging Chat system
+Backend: ASP.NET Core Web API, Entity Framework Core, AutoMapper, SignalR, JWT
+Frontend: Angular, TypeScript, Bootstrap, RxJS
+Database: SQL Server
+Automation Tools: ChatGPT, Cursor, Replit, Cloudinary API
+Deployment: IIS / Azure
 
-- User can like profiles of other users( of opposite sex ) and can recieve likes from other users as well. Implemented Many-To-Many relationships.
+⚙️ Setup Instructions
 
-- Global error Handling in the API and the SPA.
+Backend
 
-- ngx-loader to show loader on each http request and hide loader on http response.
+cd API
+dotnet ef database update
+dotnet run
 
-- Implemeted Routing. Secured routes with CanActivate and CanDeActivate guards.
 
-- Resolvers to pass data in route.
+API available at http://localhost:5000/swagger
 
-- Used Angular Reactive forms.
+Frontend
 
-- Deployed to Azure
+cd client
+npm install
+npm start
 
-- HTTPS certificate applied
+
+Frontend available at http://localhost:4200
+
+📜 License
+
+MIT License — open source and available for learning and professional use.
